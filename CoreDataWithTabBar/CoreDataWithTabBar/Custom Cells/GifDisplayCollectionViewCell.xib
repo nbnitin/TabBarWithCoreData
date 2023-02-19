@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="r4Z-Br-zDJ" customClass="GifDisplayCollectionViewCell" customModule="CoreDataWithTabBar" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="197" height="164"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="nKQ-1U-NUc">
+                <rect key="frame" x="0.0" y="0.0" width="197" height="164"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OSp-gu-LtH">
+                        <rect key="frame" x="0.0" y="0.0" width="197" height="164"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8co-dg-9m4">
+                        <rect key="frame" x="169" y="7.6666666666666679" width="20" height="19.66666666666665"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="0oD-uN-7Xf"/>
+                            <constraint firstAttribute="height" constant="20" id="S9U-dX-iHL"/>
+                        </constraints>
+                    </imageView>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="ued-PX-bLT">
+                        <rect key="frame" x="88.666666666666671" y="72" width="20" height="20"/>
+                    </activityIndicatorView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="OSp-gu-LtH" secondAttribute="trailing" id="2Mh-gK-aCc"/>
+                    <constraint firstItem="ued-PX-bLT" firstAttribute="centerY" secondItem="OSp-gu-LtH" secondAttribute="centerY" id="4WC-ZR-JRi"/>
+                    <constraint firstAttribute="trailing" secondItem="8co-dg-9m4" secondAttribute="trailing" constant="8" id="4YG-Ca-Sx0"/>
+                    <constraint firstItem="ued-PX-bLT" firstAttribute="centerX" secondItem="OSp-gu-LtH" secondAttribute="centerX" id="Jt8-QB-wk6"/>
+                    <constraint firstItem="OSp-gu-LtH" firstAttribute="leading" secondItem="nKQ-1U-NUc" secondAttribute="leading" id="Pfu-Nc-a8W"/>
+                    <constraint firstItem="OSp-gu-LtH" firstAttribute="top" secondItem="nKQ-1U-NUc" secondAttribute="top" id="nEu-hb-glo"/>
+                    <constraint firstAttribute="bottom" secondItem="OSp-gu-LtH" secondAttribute="bottom" id="pfX-Ck-CUc"/>
+                    <constraint firstItem="8co-dg-9m4" firstAttribute="top" secondItem="nKQ-1U-NUc" secondAttribute="top" constant="8" id="xmY-pp-ykx"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="197" height="164"/>
+            <connections>
+                <outlet property="img" destination="OSp-gu-LtH" id="Q0v-e5-0jK"/>
+                <outlet property="imgFav" destination="8co-dg-9m4" id="uNf-2p-Y13"/>
+                <outlet property="loader" destination="ued-PX-bLT" id="FX0-3l-UMD"/>
+            </connections>
+            <point key="canvasLocation" x="252.67175572519082" y="-4.9295774647887329"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="star" catalog="system" width="128" height="116"/>
+    </resources>
+</document>
